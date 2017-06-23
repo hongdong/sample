@@ -123,6 +123,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u47-ei-BdS">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.36699289080000003" green="0.80190771819999995" blue="0.9650143981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="KJM-pz-8yU">
                                     <rect key="frame" x="0.0" y="72" width="375" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

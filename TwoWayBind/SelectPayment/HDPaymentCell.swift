@@ -31,13 +31,19 @@ class HDPaymentCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
     }
 
 }
 
 extension Reactive where Base: HDPaymentCell {
     var isSelectedPayment: UIBindingObserver<UIImageView, Bool> {
-        
-        return base.selectButton.rx.isSelected
+        return UIBindingObserver<UIImageView, Bool>(UIElement: self.base.isSelectImageView) { imageView,isSelected in
+            if isSelected {
+               imageView.image = #imageLiteral(resourceName: "ic_selected")
+            } else {
+                imageView.image = #imageLiteral(resourceName: "ic_select")
+            }
+        }
     }
 }

@@ -15,10 +15,18 @@ typealias PaymentSectionModel = AnimatableSectionModel<HDDataPaymentSection, HDM
 class HDPaymentViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView! {
         didSet{
+            
             mainTableView
             .rx
             .enableAutoDeselect()
             .disposed(by: rx_disposeBag)
+            
+            mainTableView
+            .rx
+            .modelSelected(HDModelPayment.self)
+            .bind(to: paymentSectionData.selectPayment)
+            .disposed(by: rx.disposeBag)
+            
         }
     }
     
@@ -31,10 +39,10 @@ class HDPaymentViewController: UIViewController {
             let sectionData = ds[ip.section]//拿到这个组的SectionModel,里面保存了这个组选择的是哪一个
             let selectedPayment = sectionData.model.selectPayment.asObservable()
             
-            //                selectedPayment
-            //                    .map { $0 == payment }
-            //                    .bind(to: cell.rx.isSelectedPayment)
-            //                    .disposed(by: cell.rx.prepareForReuseBag)
+            selectedPayment
+                .map { $0 == payment }
+                .bind(to: cell.rx.isSelectedPayment)
+                .disposed(by: cell.rx.prepareForReuseBag)
             
             return cell
         }
@@ -42,11 +50,28 @@ class HDPaymentViewController: UIViewController {
         
     }
     
+    let paymentSectionData = HDDataPaymentSection(defaultSelected: HDModelPayment.alipay)
+    
+    var paymentSection:PaymentSectionModel {
+        return PaymentSectionModel(
+            model: paymentSectionData,
+            items: [.alipay, .wechat, .applepay, .unionpay]);
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        Observable.just([paymentSection])
+            .bind(to: mainTableView.rx.items(dataSource: dataSource))
+            .disposed(by: rx.disposeBag)
+        
+        do {//title
+            paymentSectionData.selectPayment.asObservable()
+                .map { $0.iconAndName.name }
+                .bind(to: self.rx.title)
+                .disposed(by: rx.disposeBag)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
