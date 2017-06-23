@@ -11,6 +11,7 @@
 		AE2D107B1EFBA3620037A5C1 /* HDPaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D107A1EFBA3620037A5C1 /* HDPaymentCell.swift */; };
 		AE2D107D1EFBA3B50037A5C1 /* HDPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D107C1EFBA3B50037A5C1 /* HDPaymentViewController.swift */; };
 		AE2D107F1EFBB9DD0037A5C1 /* HDDataPaymentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D107E1EFBB9DD0037A5C1 /* HDDataPaymentSection.swift */; };
+		AE34B8A21EFD06BA006CBA13 /* HDModelPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE34B8A11EFD06BA006CBA13 /* HDModelPayment.swift */; };
 		AE7F73591EF9026000D4C2EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7F73581EF9026000D4C2EE /* AppDelegate.swift */; };
 		AE7F735B1EF9026000D4C2EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7F735A1EF9026000D4C2EE /* ViewController.swift */; };
 		AE7F735E1EF9026000D4C2EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7F735C1EF9026000D4C2EE /* Main.storyboard */; };
@@ -31,7 +32,6 @@
 		AE7F73A21EFA5D9D00D4C2EE /* AutoDeselect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7F73A11EFA5D9D00D4C2EE /* AutoDeselect.swift */; };
 		AE7F73A41EFA623600D4C2EE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7F73A31EFA623600D4C2EE /* R.generated.swift */; };
 		AE7F73A61EFA79E000D4C2EE /* TableViewCell+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7F73A51EFA79E000D4C2EE /* TableViewCell+Rx.swift */; };
-		AE7F73A91EFB733800D4C2EE /* HDModelPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7F73A81EFB733800D4C2EE /* HDModelPayment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +41,7 @@
 		AE2D107A1EFBA3620037A5C1 /* HDPaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDPaymentCell.swift; sourceTree = "<group>"; };
 		AE2D107C1EFBA3B50037A5C1 /* HDPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDPaymentViewController.swift; sourceTree = "<group>"; };
 		AE2D107E1EFBB9DD0037A5C1 /* HDDataPaymentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDataPaymentSection.swift; sourceTree = "<group>"; };
+		AE34B8A11EFD06BA006CBA13 /* HDModelPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDModelPayment.swift; sourceTree = "<group>"; };
 		AE7F73561EF9026000D4C2EE /* Chain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7F73581EF9026000D4C2EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE7F735A1EF9026000D4C2EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		AE7F73A11EFA5D9D00D4C2EE /* AutoDeselect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDeselect.swift; sourceTree = "<group>"; };
 		AE7F73A31EFA623600D4C2EE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		AE7F73A51EFA79E000D4C2EE /* TableViewCell+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Rx.swift"; sourceTree = "<group>"; };
-		AE7F73A81EFB733800D4C2EE /* HDModelPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDModelPayment.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +190,7 @@
 		AE7F73A71EFB730E00D4C2EE /* SelectPayment */ = {
 			isa = PBXGroup;
 			children = (
-				AE7F73A81EFB733800D4C2EE /* HDModelPayment.swift */,
+				AE34B8A11EFD06BA006CBA13 /* HDModelPayment.swift */,
 				AE2D107A1EFBA3620037A5C1 /* HDPaymentCell.swift */,
 				AE2D107C1EFBA3B50037A5C1 /* HDPaymentViewController.swift */,
 				AE2D107E1EFBB9DD0037A5C1 /* HDDataPaymentSection.swift */,
@@ -431,12 +431,12 @@
 				AE2D107F1EFBB9DD0037A5C1 /* HDDataPaymentSection.swift in Sources */,
 				AE2D107D1EFBA3B50037A5C1 /* HDPaymentViewController.swift in Sources */,
 				AE7F73A61EFA79E000D4C2EE /* TableViewCell+Rx.swift in Sources */,
-				AE7F73A91EFB733800D4C2EE /* HDModelPayment.swift in Sources */,
 				AE7F739B1EFA1D5A00D4C2EE /* HDModelProduct.swift in Sources */,
 				AE7F73A21EFA5D9D00D4C2EE /* AutoDeselect.swift in Sources */,
 				AE2D107B1EFBA3620037A5C1 /* HDPaymentCell.swift in Sources */,
 				AE7F739F1EFA46F300D4C2EE /* HDCartViewController.swift in Sources */,
 				AE7F739D1EFA43CE00D4C2EE /* HDProductCell.swift in Sources */,
+				AE34B8A21EFD06BA006CBA13 /* HDModelPayment.swift in Sources */,
 				AE7F73A41EFA623600D4C2EE /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
