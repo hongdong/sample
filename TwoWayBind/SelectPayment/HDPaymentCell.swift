@@ -39,11 +39,7 @@ class HDPaymentCell: UITableViewCell {
 extension Reactive where Base: HDPaymentCell {
     var isSelectedPayment: UIBindingObserver<UIImageView, Bool> {
         return UIBindingObserver<UIImageView, Bool>(UIElement: self.base.isSelectImageView) { imageView,isSelected in
-            if isSelected {
-               imageView.image = #imageLiteral(resourceName: "ic_selected")
-            } else {
-                imageView.image = #imageLiteral(resourceName: "ic_select")
-            }
+            imageView.image = isSelected ? #imageLiteral(resourceName: "ic_selected") : #imageLiteral(resourceName: "ic_select")
         }
     }
 }
