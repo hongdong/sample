@@ -79,7 +79,7 @@ class SquarePegAdaptor: Circularity {
   		}
 }
 
-// Use extension
+// Use extension,有时候扩展也用来区分逻辑块的，好习惯
 extension SquarePeg: Circularity {
   		var radius: Double {
             get {

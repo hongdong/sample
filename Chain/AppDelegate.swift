@@ -25,9 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let dealed_arr = [1,2,3,4,5,6]
                 .filter{
                     return $0 % 2 == 0
-                }.map{
+                }
+                .map{
                     return $0 * 2
-            }
+                }
             
             print(dealed_arr)
             
@@ -38,7 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let dealed_arr = [1,2,3,4,5,6]
                 .filter({
                     return $0%2 == 0
-                }).map({
+                })
+                .map({
                     return $0 * 2
                 })
             
@@ -46,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         } //test2
         
-        do{
+        do{   //函数就等于一个产量
             let what = [1,2,3,4,5,6].filter
             print(what)
         } //test3  ((Int) -> Bool) -> [Int]
